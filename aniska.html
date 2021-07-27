@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font: poppins;
+            height: 20rem;
+            left: 0;
+            right: 0;
+
+
+
+        }
+
+        #main {
+            width: 100%;
+            /* height: 100vh; */
+            /* position: relative; */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.02);
+            z-index: 1;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu li a {
+            height: 40px;
+            line-height: 43px;
+            margin: 3px;
+            padding: 0px 22px;
+            display: flex;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: gray;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            color: green;
+        }
+
+        .hey {
+            color: #f04a2d;
+            font-weight: 500;
+            font-size: 0.9em;
+            border-bottom: 2px solid #bb351e;
+        }
+
+        .menu li a:hover {
+            color: black;
+            background-color: red;
+
+
+            border-radius: 15px;
+        }
+
+        #home {
+            color: black;
+            background-color: red;
+
+            border-radius: 15px;
+
+        }
+
+        .cont {
+            display: flex;
+            /* flex-wrap: wrap; */
+            width: 90%;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+            height: 20rem;
+
+        }
+
+        .dress {
+            height: 100rem;
+
+        }
+
+        .box1 {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 30px;
+            cursor: pointer;
+            border: 8px solid rgb(236, 65, 34);
+            text-align: center;
+        }
+
+        .box1:hover {
+            width: 300px;
+
+        }
+
+        .text {
+            height: 90rem;
+            align-items: center;
+            text-align: center;
+            color: gray;
+            font-size: 1.3rem;
+
+        }
+
+        h1 {
+            color: red;
+            font-size: 3rem;
+            font-weight: bold;
+
+        }
+
+        .btn {
+            
+
+            color: red;
+
+            border-radius: 30px;
+            padding: 14px;
+            margin: 10PX;
+            border: 3px solid red;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 0.2s;
+            margin: 30px;
+
+
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: red;
+
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+            font-size: 40px;
+
+        }
+
+
+        .photo {
+           
+            text-align: center;
+            position: absolute;
+             left: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            right : 50%; 
+            transform: translate(-50%, -50%);
+            height: 7rem;
+
+           
+            
+        }
+        .image{
+            /* padding: 2px; */
+        }
+        h4{
+           
+            color: red;
+            border: 3px solid red;
+            text-align: center;
+            border-radius: 40px;
+            padding: 15px;
+            font-size: 30px;
+           
+        }
+        .box{
+            border: 3px solid red;
+            width: 400px;
+            text-align: center;
+            display: block;
+            margin: auto;
+            font-size: 40px;
+            border-radius: 60px;
+            padding: 25px;
+            background-color: red;
+            
+            
+            
+        }
+      
+
+        
+        .degn{
+
+            position: absolute;
+            left: 40%;
+            right: 80%;
+            transform: translate(-50%, -50%);
+            height: 15rem;
+
+        }
+        .review{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            
+    
+           
+            
+            height:  0rem;
+           margin-top: 40rem;
+          
+            
+        }
+        
+       
+
+
+        
+
+        .bag1{
+            height: 500px;
+            width: 1000px;
+            background-color: rgb(252, 21, 21);
+            color: white;
+            /* margin-left: 50px; */
+            /* border-radius: 60px; */
+            
+        }
+       
+        
+        .bag2{
+            height: 500px;
+           width: 800px;
+            background-color: white;
+            color: white;
+            margin-left: 100px;
+
+        }
+        .item1{
+            text-align: center;
+            display: block;
+            margin: auto;
+            margin-top: 80px;
+            font-size: 60px;
+        }
+        .item2{
+            text-align: center;
+           
+            margin-top: 80px; display: block;
+            margin: auto;
+            font-size: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+         .btn2{
+            text-align: center;
+            display: block;
+            margin: auto;
+            margin-top: 110PX;
+            
+            border-radius: 30px;
+            padding: 11px; 
+            margin: 10PX;
+            border: 3px solid rgb(235, 221, 221);
+            text-transform: uppercase;
+            overflow: hidden;
+            
+           
+            color: white;
+            width: 100px;
+            
+         }
+         .btn2:hover{
+            color: black;
+            background-color: rgb(250, 237, 237);
+
+         }
+         .item3{
+            text-align: center;
+           
+           margin-top: 80px; 
+           display: block;
+           margin: auto;
+           padding: 20px;
+           border-radius: 50%;
+
+         }
+         .item4{
+            text-align: center;
+           
+           margin-top: 80px;
+            display: block;
+           margin: auto;
+           font-size: 30px;
+           margin-left: 15px;
+           margin-right: 15px;
+           color: red;
+
+         }
+         .btn3{
+            text-align: center;
+            display: block;
+            margin: auto;
+            margin-top: 150PX;
+            
+            border-radius: 30px;
+            padding: 17px; 
+            margin: 10PX;
+            border: 3px solid red;
+            text-transform: uppercase;
+            overflow: hidden;
+            
+           
+            color: red;
+            width: 200px;
+            margin-left: 280px;
+            font-size: 20px;
+            font-weight: bold;
+            
+
+         }
+         .btn3:hover{
+            color: black;
+            background-color: red;
+
+         }
+         .last{
+             height: 400px;
+             background-color: red;
+             margin-top: 900px;
+             display: flex;
+             flex-direction: column;
+
+
+         }
+         .item5{
+             color: white;
+             display: block;
+             margin: auto;
+             font-size: 40px;
+             margin-top: 50px;
+         }
+         .item6{
+             color: white;
+             display: block;
+             margin: auto;
+             font-size: 30px;
+             margin-top: 1px;
+             margin-bottom: 290px;
+             height: 20px;
+         }
+        
+            
+             
+            
+         
+         .mail{
+            
+            margin: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 30px;
+            cursor: pointer;
+            border: 8px solid rgb(236, 65, 34);
+            text-align: center;
+            width: 300px;
+         }
+         .mail:hover{
+            
+            width: 300px
+         }
+         .item7{
+             margin-bottom: ;
+         }
+         .btn4{
+            text-align: center;
+            display: block;
+            margin: auto;
+             margin-bottom: 800px;            
+            border-radius: 30px;
+            padding: 3px; 
+            
+            border: 3px solid rgb(235, 221, 221);
+            text-transform: uppercase;
+            overflow: hidden;
+            
+           
+            color: white;
+            width: 150px;
+            font-size: 21px;
+            
+
+         }
+         .btn4:hover{
+
+            color: black;
+            background-color: rgb(250, 237, 237);
+
+         }
+
+
+       
+       
+       
+       
+    </style>
+</head>
+
+<body>
+    <section id="main">
+        <nav>
+            <a href="#" class="logo">
+                <img src="dresslogo.png" alt=" the logo" height="100px" width="100px">
+            </a>
+            <ul class="menu">
+                <li><a id="home" href="#">HOME</a></li>
+
+                <li><a href="aniska3.html">Dresses</a></li>
+                <li><a href="aniska2.html">Sign Up</a></li>
+            </ul>
+            <a href="#" class="hey"><strong> <input type="text" class="box1" placeholder="SEARCH"></strong></a>
+        </nav>
+    </section>
+
+    <div class="cont">
+        <div class="dress">
+            <img src="dress1.jpg" alt="" srcset="">
+        </div>
+        <div class="text">
+            <h1>
+                ANISKA'S WEDDING COLLECTION
+            </h1>
+            <P>
+            <h2>
+                Experience The Magic
+
+            </h2>
+            The Laregest Selection of dresses. Expert consultant to help you find yours. And the magic of the aniska
+            team to bring it all together
+            </P>
+            <a href="aniska2.html" class="btn">BOOK AN APPOINMENT</a>
+
+
+
+
+        </div>
+        <div class="dress">
+            <img src="dresss4.jpg" alt="" srcset="">
+        </div>
+
+
+    </div>
+    <div class="degn">
+
+        <div class="box">
+            OUR DESIGNERS
+        </div>
+    </div>
+    
+
+    
+        <div class="photo">
+
+            <div class="image">
+                <img  src="manish.jpeg" alt="" srcset="" height="400px" width="500px">
+                <a href="#" class="head"><h4 >Manish Malhotra</h4></a>
+            </div>
+            <div class="image">
+                <img src="ankita.jpeg" alt="" srcset="" height="400px" width="500px">
+                <a href="#" class="head"><h4 >Ankita Dongre</h4></a>
+            </div>
+            <div class="image">
+                <img src="sabhya.jpg" alt="" srcset="" height="400px" width="500px">
+                <a href="#" class="head"><h4>Sabhyasachi Mukherjee</h4></a>
+            </div>
+            <div class="image">
+                <img src="abu jani.jpg" alt="" srcset="" height="400px" width="500px">
+                <a href="#" class="head"><h4>Abu Jani</h4></a>
+            </div>
+        
+
+    </div>
+    <div class="review">
+        <div class="bag1">
+          
+
+            <div class="item1">
+                What Our Buyers Says
+    
+            </div>
+            <div class="item2">
+                Feedback from these happy buyers heps us in  reaching the heights. It helps us determine if our customers are satisfied with our service and detect areas where we should improve.
+
+
+              
+                
+            </div>
+            <a href="#" class="btn2">MORE</a>
+        </div>
+        <div class="bag2">
+
+            <img class="item3" src="girl.jpg" alt="" srcset="" height="200px">
+            <div class="item4">
+                ~Anuska Singh~
+                <br>
+                 I am highly impressed by the quality of the product. Beautiful lahnga in affordable price. It is exactly same as shown in the pictures. 
+            </div>
+            
+                <a href="#" class="btn3">SEE ALL REVIEWS</a>
+
+            
+
+
+
+        </div>
+
+    </div>
+    <div class="last">
+        <div class="item5">
+            LOVE ANISKA'S WEDDING COLLECTION? FOLLOW ALONG
+
+        </div>
+        <div class="item6">
+            Events. Sales. Advice.Create your own designs. 
+            <br>
+            <br>
+            <br>
+            <a href="aniska2.html" class="btn4">Join Now</a>
+
+        </div>
+       
+        
+    </div>
+    
+
+
+      
+        
+   
+    
+
+    <!-- <script>
+          let deletepost = confirm("do u want to receive the notification fron aniska's collection")
+         console.log(deletepost)
+         if(deletepost){
+             console.log("send notification")
+
+         }
+         else{
+             console.log("  do not send notification")
+         }
+    </script> -->
+
+
+</body>
+
+</html>
